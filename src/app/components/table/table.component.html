@@ -1,0 +1,33 @@
+<p-tabView>
+  <p-tabPanel header="Staff Type">
+      <p-table [value]="datos">
+          <ng-template pTemplate="header">
+              <tr>
+                <th>Description</th>
+                <th>Code</th>
+                <th>Role</th>
+                <th>Active</th>
+                <th>Last Modified by</th>
+                <th>Last Modified date</th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-dato>
+              <tr>
+                <td>{{dato.description}}</td>
+                <td>{{dato.code}}</td>
+                <td>{{dato.rol}}</td>
+                <td>{{dato.active}}</td>
+                <td>{{dato.last_modifided_by}}</td>
+                <td>{{dato.last_modifided_date}}</td>
+              </tr>
+          </ng-template>
+      </p-table>
+   
+  </p-tabPanel>
+  <p-tabPanel header="Contact Center" [disabled]="true">
+    Content 2
+  </p-tabPanel>
+  <p-tabPanel header="Computers & Phones" [disabled]="true">
+    Content 3
+  </p-tabPanel>
+</p-tabView>
