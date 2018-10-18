@@ -1,6 +1,6 @@
 <p-tabView>
   <p-tabPanel header="Staff Type">
-      <p-table [value]="datos">
+      <p-table [value]="items">
           <ng-template pTemplate="header">
               <tr>
                 <th>Description</th>
@@ -12,7 +12,7 @@
               </tr>
           </ng-template>
           <ng-template pTemplate="body" let-dato>
-              <tr>
+              <tr (click)="editTableData(dato)">
                 <td>{{dato.description}}</td>
                 <td>{{dato.code}}</td>
                 <td>{{dato.rol}}</td>
@@ -31,3 +31,6 @@
     Content 3
   </p-tabPanel>
 </p-tabView>
+
+
+

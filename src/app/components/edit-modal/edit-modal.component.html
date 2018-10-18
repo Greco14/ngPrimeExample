@@ -1,0 +1,59 @@
+<button type="text" (click)="showDialog()" pButton icon="pi pi-info-circle" label="Add Staff"></button>
+<p-dialog header="Update Staff Type" [(visible)]="openModal" (onAfterHide)="afterHide()"  modal="modal" width="auto" responsive="true">
+    <div class="ui-g ui-fluid">
+        <div class="ui-md-4">
+            <p class="label-input">
+                Staff Type Code
+            </p>
+        </div>
+        <div class="ui-md-8">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText> 
+                <label for="float-input">123</label>
+            </span>
+        </div>
+        <div class="ui-md-4">
+            <p class="label-input">
+                Staff Type Description
+            </p>
+        </div>
+        <div class="ui-md-8">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText> 
+                <label for="float-input">123</label>
+            </span>
+        </div>
+        <div class="ui-md-4">
+            <p class="label-input">
+               Staff Role
+            </p>
+        </div>
+        <div class="ui-md-8">
+            <p-dropdown [options]="roles" placeholder="Select one" [(ngModel)]="roleSeleced">
+            </p-dropdown>
+        </div>
+        <div class="ui-md-4">
+            <p class="label-input">
+               Enable After Call Work
+            </p>
+        </div>
+        <div class="ui-md-8">
+            <p-dropdown [options]="afterCallWork" placeholder="Select one" [(ngModel)]="afterCallSelected">
+            </p-dropdown>
+        </div>
+        <div class="ui-md-4">
+            <p class="label-input">
+               Restrict Call History
+            </p>
+        </div>
+        <div class="ui-md-8">
+            <p-dropdown [options]="restrictCallHistory" placeholder="Select one" [(ngModel)]="restrictCallSelected">
+            </p-dropdown>
+        </div>
+    </div>
+    
+        <p-footer>
+            <button type="button" pButton icon="pi pi-check" (click)="display=false" label="SAVE"></button>
+            <button type="button" pButton icon="pi pi-close" (click)="display=false" label="CANCEL" class="ui-button-secondary"></button>
+        </p-footer>
+</p-dialog>
